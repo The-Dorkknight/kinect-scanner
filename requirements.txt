@@ -1,0 +1,18 @@
+# The app installs these itself into kinect_env/ on first run (see
+# REQUIRED_PACKAGES in kinect_scanner_app.py). This file is for CI and for
+# developers who want to run it in their own environment.
+numpy>=1.22.0,<2.0.0
+open3d>=0.17.0
+opencv-python>=4.8.0,<4.12
+Pillow>=10.0.0
+
+# Dev/test only -- not needed to run the app itself:
+#   pytest>=7.0.0    (runs tests/test_kinect.py, against hand-built driver
+#                      stand-ins -- see README.md's testing table)
+
+# NOT listed here, and NOT pip-installable reliably:
+#   freenect         (Kinect v1 -- the Python wrapper bundled with libfreenect's
+#                      own source tree; there is no standalone PyPI package)
+#   pylibfreenect2    (Kinect v2 -- is on PyPI, but needs libfreenect2 itself
+#                      already built and discoverable on your system first)
+# Both require a manual driver build per-OS. See README.md -> Install.

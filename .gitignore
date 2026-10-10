@@ -1,0 +1,7 @@
+kinect_env/
+__pycache__/
+*.pyc
+.deps_ok
+bootstrap.log
+scans/
+.pytest_cache/
